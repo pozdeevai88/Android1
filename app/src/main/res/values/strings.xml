@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Android1Lesson1</string>
+    <string name="app_name">Calc</string>
+    <string name="_button1">1</string>
+    <string name="_button2">2</string>
+    <string name="_button3">3</string>
+    <string name="_button4">4</string>
+    <string name="_button5">5</string>
+    <string name="_button6">6</string>
+    <string name="_button7">7</string>
+    <string name="_button8">8</string>
+    <string name="_button9">9</string>
+    <string name="_button0">0</string>
+    <string name="_buttonAdd">+</string>
+    <string name="_buttonSub">-</string>
+    <string name="_buttonMul">*</string>
+    <string name="_buttonDiv">/</string>
+    <string name="_buttonDot">.</string>
+    <string name="_buttonResult">=</string>
 </resources>
