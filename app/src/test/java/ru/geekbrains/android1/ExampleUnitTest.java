@@ -1,4 +1,4 @@
-package ru.geekbrains.android1lesson1;
+package ru.geekbrains.android1;
 
 import org.junit.Test;
 
