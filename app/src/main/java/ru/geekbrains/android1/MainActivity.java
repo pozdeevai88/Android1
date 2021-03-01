@@ -1,5 +1,6 @@
 package ru.geekbrains.android1;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,20 +16,24 @@ import java.util.LinkedList;
 public class MainActivity extends AppCompatActivity {
 
     static final String LOG_TAG = "CALC_LOG:";
-    public static boolean isResultOnScreen = true;
-    public static boolean isActionSet = false;
-    public static String currentNumber = "";
-    public static LinkedList<String> formula = new LinkedList<>();
+    private static boolean isResultOnScreen = true;
+    private static boolean isActionSet = false;
+    private static String currentNumber = "";
+    private static LinkedList<String> formula = new LinkedList<>();
+    private TextView numbersBox;
+    private UserData userData;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        userData = new UserData("0");
         setContentView(R.layout.activity_main);
         Log.i(LOG_TAG, "onCreate()");
 
-        TextView numbersBox = findViewById(R.id.numbersBox);
+        numbersBox = findViewById(R.id.numbersBox);
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
@@ -249,16 +254,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        numbersBox.setText(userData.getTextBox());
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        userData.setTextBox(numbersBox.getText().toString());
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        userData.setTextBox(numbersBox.getText().toString());
     }
 
     @Override
@@ -269,16 +277,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+        numbersBox.setText(userData.getTextBox());
     }
 
-//    @Override
-//    public void onSaveInstanceState(@NonNull Bundle instanceState) {
-//        super.onSaveInstanceState(instanceState);
-//    }
-//
-//    @Override
-//    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
-//        super.onRestoreInstanceState(instanceState);
-//    }
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putParcelable("NumbersBox", userData);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        userData = instanceState.getParcelable("NumbersBox");
+    }
 
 }
