@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView numbersBox;
     private UserData userData;
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @SuppressLint("SetTextI18n")
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,163 +52,72 @@ public class MainActivity extends AppCompatActivity {
         Button buttonResult = findViewById(R.id.buttonResult);
 
         button1.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "1");
-            currentNumber += "1";
+            numberPressed("1");
         });
 
         button2.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "2");
-            currentNumber += "2";
+            numberPressed("2");
         });
 
         button3.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "3");
-            currentNumber += "3";
+            numberPressed("3");
         });
 
         button4.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "4");
-            currentNumber += "4";
+            numberPressed("4");
         });
 
         button5.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "5");
-            currentNumber += "5";
+            numberPressed("5");
         });
 
         button6.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "6");
-            currentNumber += "6";
+            numberPressed("6");
         });
 
         button7.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "7");
-            currentNumber += "7";
+            numberPressed("7");
         });
 
         button8.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "8");
-            currentNumber += "8";
+            numberPressed("8");
         });
 
         button9.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "9");
-            currentNumber += "9";
+            numberPressed("9");
         });
 
         button0.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + "0");
-            currentNumber += "0";
-        });
-
-        buttonAdd.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            if (isActionSet) {
-                try {
-                    numbersBox.setText(
-                            numbersBox.getText().subSequence(0, numbersBox.getText().length() - 1));
-                }catch (StringIndexOutOfBoundsException e) {
-                    numbersBox.setText("error");
-                }
-                formula.removeLast();
-            }
-            numbersBox.setText(numbersBox.getText() + "+");
-            if (!isActionSet) formula.add(currentNumber);
-            isActionSet = true;
-            formula.add("ADD");
-            currentNumber = "";
-        });
-
-        buttonSub.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            if (isActionSet) {
-                try {
-                    numbersBox.setText(
-                            numbersBox.getText().subSequence(0, numbersBox.getText().length() - 1));
-                }catch (StringIndexOutOfBoundsException e) {
-                    numbersBox.setText("error");
-                }
-                formula.removeLast();
-            }
-            numbersBox.setText(numbersBox.getText() + "-");
-            if (!isActionSet) formula.add(currentNumber);
-            isActionSet = true;
-            formula.add("SUB");
-            currentNumber = "";
-        });
-
-        buttonMul.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            if (isActionSet) {
-                try {
-                    numbersBox.setText(
-                            numbersBox.getText().subSequence(0, numbersBox.getText().length() - 1));
-                }catch (StringIndexOutOfBoundsException e) {
-                    numbersBox.setText("error");
-                }
-                formula.removeLast();
-            }
-            numbersBox.setText(numbersBox.getText() + "*");
-            if (!isActionSet) formula.add(currentNumber);
-            isActionSet = true;
-            formula.add("MUL");
-            currentNumber = "";
-        });
-
-        buttonDiv.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            if (isActionSet) {
-                try {
-                    numbersBox.setText(
-                            numbersBox.getText().subSequence(0, numbersBox.getText().length() - 1));
-                }catch (StringIndexOutOfBoundsException e) {
-                    numbersBox.setText("error");
-                }
-                formula.removeLast();
-            }
-            numbersBox.setText(numbersBox.getText() + "/");
-            if (!isActionSet) formula.add(currentNumber);
-            isActionSet = true;
-            formula.add("DIV");
-            currentNumber = "";
+            numberPressed("0");
         });
 
         buttonDot.setOnClickListener(v -> {
-            if (isResultOnScreen) numbersBox.setText("");
-            isResultOnScreen = false;
-            isActionSet = false;
-            numbersBox.setText(numbersBox.getText() + ",");
-            currentNumber += ".";
+            numberPressed(".");
+        });
+
+        buttonAdd.setOnClickListener(v -> {
+            actionPressed();
+            numbersBox.setText(numbersBox.getText() + "+");
+            formula.add("ADD");
+        });
+
+        buttonSub.setOnClickListener(v -> {
+            actionPressed();
+            numbersBox.setText(numbersBox.getText() + "-");
+            formula.add("SUB");
+
+        });
+
+        buttonMul.setOnClickListener(v -> {
+            actionPressed();
+            numbersBox.setText(numbersBox.getText() + "*");
+            formula.add("MUL");
+        });
+
+        buttonDiv.setOnClickListener(v -> {
+            actionPressed();
+            numbersBox.setText(numbersBox.getText() + "/");
+            formula.add("DIV");
         });
 
         buttonResult.setOnClickListener(v -> {
@@ -228,22 +137,52 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Log.i(LOG_TAG, formula.toString());
                     Log.i(LOG_TAG, a + " " + formula.get(i) + " " + b);
-                    if (formula.get(i).equals("ADD")) {
-                        formula.set(i + 1, String.valueOf(Float.sum(a, b)));
-                    } else if (formula.get(i).equals("SUB")) {
-                        formula.set(i + 1, String.valueOf(a - b));
-                    } else if (formula.get(i).equals("MUL")) {
-                        formula.set(i + 1, String.valueOf(a * b));
-                    } else if (formula.get(i).equals("DIV")) {
-                        formula.set(i + 1, String.valueOf(a / b));
+                    switch (formula.get(i)) {
+                        case "ADD":
+                            formula.set(i + 1, String.valueOf(Float.sum(a, b)));
+                            break;
+                        case "SUB":
+                            formula.set(i + 1, String.valueOf(a - b));
+                            break;
+                        case "MUL":
+                            formula.set(i + 1, String.valueOf(a * b));
+                            break;
+                        case "DIV":
+                            formula.set(i + 1, String.valueOf(a / b));
+                            break;
                     }
                     Log.i(LOG_TAG, formula.toString());
                 }
                 numbersBox.setText(formula.getLast());
             }
-
             formula.clear();
         });
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void actionPressed() {
+        if (isResultOnScreen) numbersBox.setText("");
+        if (isActionSet) {
+            try {
+                numbersBox.setText(
+                        numbersBox.getText().subSequence(0, numbersBox.getText().length() - 1));
+            } catch (StringIndexOutOfBoundsException e) {
+                numbersBox.setText("error");
+            }
+            formula.removeLast();
+        }
+        if (!isActionSet) formula.add(currentNumber);
+        isActionSet = true;
+        currentNumber = "";
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void numberPressed(String number) {
+        if (isResultOnScreen) numbersBox.setText("");
+        isResultOnScreen = false;
+        isActionSet = false;
+        numbersBox.setText(numbersBox.getText() + number);
+        currentNumber += number;
     }
 
     @Override
