@@ -1,85 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_gravity="center"
+    android:background="@drawable/background">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:useDefaultMargins="true">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hardware options"
-            android:textAlignment="center"
-            android:textColor="@color/purple_700"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button7"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <EditText
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Input hostname here"
-            android:textStyle="italic" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button8"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OSPF enable" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button9"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ECMP routing enable" />
+            android:backgroundTint="@color/_buttonActionColor"
+            android:text="@string/_buttonAdd"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Allow jumbo frames" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button4"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Discard untagged frames" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button5"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Allow IGMP" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button6"
+            android:textSize="@dimen/_buttonTextSize" />
 
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/buttonSub"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:textOff="Toggle to Bridge mode"
-            android:textOn="Toggle to Router mode" />
+            android:backgroundTint="@color/_buttonActionColor"
+            android:text="@string/_buttonSub"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button1"
+            android:textSize="@dimen/_buttonTextSize" />
 
         <Button
             android:id="@+id/button2"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#F44336"
-            android:text="Apply changes"
-            android:textColor="#F44336"
-            app:iconTint="#FF9800" />
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button2"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button3"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/buttonMul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonActionColor"
+            android:text="@string/_buttonMul"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/buttonResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonActionColor"
+            android:text="@string/_buttonResult"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_button0"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonNumericColor"
+            android:text="@string/_buttonDot"
+            android:textSize="@dimen/_buttonTextSize" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/_buttonActionColor"
+            android:text="@string/_buttonDiv"
+            android:textSize="@dimen/_buttonTextSize" />
 
 
-    </LinearLayout>
+    </GridLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,4 +1,4 @@
-package ru.geekbrains.android1lesson1;
+package ru.geekbrains.android1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.another_layout);
+        setContentView(R.layout.activity_main);
     }
 }
