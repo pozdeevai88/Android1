@@ -11,9 +11,9 @@
         android:id="@+id/numbersBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="textEnd"
-        android:layout_marginVertical="20dp"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="@dimen/_buttonTextSize" />
 
@@ -27,131 +27,83 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button7"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button7" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button8"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button8" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button9"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button9" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonActionColor"
-            android:text="@string/_buttonAdd"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/ActionButtonStyle"
+            android:text="@string/_buttonAdd" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button4"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button5"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button5" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button6"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button6" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonActionColor"
-            android:text="@string/_buttonSub"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/ActionButtonStyle"
+            android:text="@string/_buttonSub" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button1"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button2"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button3"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button3" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonActionColor"
-            android:text="@string/_buttonMul"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/ActionButtonStyle"
+            android:text="@string/_buttonMul" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonActionColor"
-            android:text="@string/_buttonResult"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/ActionButtonStyle"
+            android:text="@string/_buttonResult" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_button0"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_button0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonNumericColor"
-            android:text="@string/_buttonDot"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/NumericButtonStyle"
+            android:text="@string/_buttonDot" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDiv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/_buttonActionColor"
-            android:text="@string/_buttonDiv"
-            android:textSize="@dimen/_buttonTextSize" />
+            style="@style/ActionButtonStyle"
+            android:text="@string/_buttonDiv" />
 
 
     </GridLayout>

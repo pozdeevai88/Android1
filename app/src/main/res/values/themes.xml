@@ -13,4 +13,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="NumericButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:backgroundTint">@color/_buttonNumericColor</item>
+        <item name="android:textSize">@dimen/_buttonTextSize</item>
+        <item name="android:textColor">@color/_buttonTextColor</item>
+    </style>
+
+    <style name="ActionButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:backgroundTint">@color/_buttonActionColor</item>
+        <item name="android:textSize">@dimen/_buttonTextSize</item>
+        <item name="android:textColor">@color/_buttonTextColor</item>
+    </style>
+
 </resources>
