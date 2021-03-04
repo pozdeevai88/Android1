@@ -15,11 +15,11 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final LinkedList<String> formula = new LinkedList<>();
     static final String LOG_TAG = "CALC_LOG:";
     private static boolean isResultOnScreen = true;
     private static boolean isActionSet = false;
     private static String currentNumber = "";
-    private static LinkedList<String> formula = new LinkedList<>();
     private TextView numbersBox;
     private UserData userData;
 
@@ -51,49 +51,27 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDot = findViewById(R.id.buttonDot);
         Button buttonResult = findViewById(R.id.buttonResult);
 
-        button1.setOnClickListener(v -> {
-            numberPressed("1");
-        });
+        button1.setOnClickListener(v -> numberPressed("1"));
 
-        button2.setOnClickListener(v -> {
-            numberPressed("2");
-        });
+        button2.setOnClickListener(v -> numberPressed("2"));
 
-        button3.setOnClickListener(v -> {
-            numberPressed("3");
-        });
+        button3.setOnClickListener(v -> numberPressed("3"));
 
-        button4.setOnClickListener(v -> {
-            numberPressed("4");
-        });
+        button4.setOnClickListener(v -> numberPressed("4"));
 
-        button5.setOnClickListener(v -> {
-            numberPressed("5");
-        });
+        button5.setOnClickListener(v -> numberPressed("5"));
 
-        button6.setOnClickListener(v -> {
-            numberPressed("6");
-        });
+        button6.setOnClickListener(v -> numberPressed("6"));
 
-        button7.setOnClickListener(v -> {
-            numberPressed("7");
-        });
+        button7.setOnClickListener(v -> numberPressed("7"));
 
-        button8.setOnClickListener(v -> {
-            numberPressed("8");
-        });
+        button8.setOnClickListener(v -> numberPressed("8"));
 
-        button9.setOnClickListener(v -> {
-            numberPressed("9");
-        });
+        button9.setOnClickListener(v -> numberPressed("9"));
 
-        button0.setOnClickListener(v -> {
-            numberPressed("0");
-        });
+        button0.setOnClickListener(v -> numberPressed("0"));
 
-        buttonDot.setOnClickListener(v -> {
-            numberPressed(".");
-        });
+        buttonDot.setOnClickListener(v -> numberPressed("."));
 
         buttonAdd.setOnClickListener(v -> {
             actionPressed();
