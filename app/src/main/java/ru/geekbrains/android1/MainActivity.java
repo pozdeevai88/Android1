@@ -52,25 +52,15 @@ public class MainActivity extends AppCompatActivity {
         Button buttonResult = findViewById(R.id.buttonResult);
 
         button1.setOnClickListener(v -> numberPressed("1"));
-
         button2.setOnClickListener(v -> numberPressed("2"));
-
         button3.setOnClickListener(v -> numberPressed("3"));
-
         button4.setOnClickListener(v -> numberPressed("4"));
-
         button5.setOnClickListener(v -> numberPressed("5"));
-
         button6.setOnClickListener(v -> numberPressed("6"));
-
         button7.setOnClickListener(v -> numberPressed("7"));
-
         button8.setOnClickListener(v -> numberPressed("8"));
-
         button9.setOnClickListener(v -> numberPressed("9"));
-
         button0.setOnClickListener(v -> numberPressed("0"));
-
         buttonDot.setOnClickListener(v -> numberPressed("."));
 
         buttonAdd.setOnClickListener(v -> {
