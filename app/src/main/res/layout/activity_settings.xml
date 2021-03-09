@@ -11,6 +11,7 @@
         android:text="@string/_textSelectTheme" />
 
     <RadioGroup
+        android:id="@+id/ThemeSelector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 

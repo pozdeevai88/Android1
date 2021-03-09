@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDiv = findViewById(R.id.buttonDiv);
         Button buttonDot = findViewById(R.id.buttonDot);
         Button buttonResult = findViewById(R.id.buttonResult);
+        Button buttonSettings = findViewById(R.id.buttonSettings);
 
         button1.setOnClickListener(v -> numberPressed("1"));
         button2.setOnClickListener(v -> numberPressed("2"));
@@ -62,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         button9.setOnClickListener(v -> numberPressed("9"));
         button0.setOnClickListener(v -> numberPressed("0"));
         buttonDot.setOnClickListener(v -> numberPressed("."));
+
+        buttonSettings.setOnClickListener(v -> {
+            Intent showSettings = new Intent(MainActivity.this, ActivitySettings.class);
+            startActivity(showSettings);
+        });
 
         buttonAdd.setOnClickListener(v -> {
             actionPressed();
