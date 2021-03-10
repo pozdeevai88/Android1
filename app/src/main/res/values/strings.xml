@@ -18,7 +18,7 @@
     <string name="_buttonDot">.</string>
     <string name="_buttonResult">=</string>
     <string name="_buttonSettings">Настройки</string>
-    <string name="_buttonSaveSettings">Сохранить</string>
+    <string name="_buttonSaveSettings">Назад</string>
 
     <string name="_textSelectTheme">Выберите тему</string>
 
