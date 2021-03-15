@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="_buttonNumericColor">#00796B</color>
+    <color name="_buttonActionColor">#388E3C</color>
+    <color name="_buttonTextColor">#FFFFFF</color>
+</resources>
