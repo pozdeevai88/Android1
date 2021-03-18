@@ -3,8 +3,11 @@ package ru.geekbrains.android1;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +19,7 @@ import java.util.LinkedList;
 public class MainActivity extends AppCompatActivity {
 
     private static final LinkedList<String> formula = new LinkedList<>();
-    static final String LOG_TAG = "CALC_LOG:";
+    static final String LOG_TAG = "CALC_LOG: ";
     private static boolean isResultOnScreen = true;
     private static boolean isActionSet = false;
     private static String currentNumber = "";
@@ -31,7 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
         userData = new UserData("0");
         setContentView(R.layout.activity_main);
-        Log.i(LOG_TAG, "onCreate()");
+        Log.i(LOG_TAG, "Main.onCreate()");
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
+
+        boolean isSavedThemeDark = sharedPreferences.getBoolean("isDarkTheme", false);
+        Log.d(LOG_TAG, "Main.isSavedThemeDark = " + isSavedThemeDark);
+
+        if (isSavedThemeDark) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
 
         numbersBox = findViewById(R.id.numbersBox);
         Button button1 = findViewById(R.id.button1);
@@ -50,28 +64,25 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDiv = findViewById(R.id.buttonDiv);
         Button buttonDot = findViewById(R.id.buttonDot);
         Button buttonResult = findViewById(R.id.buttonResult);
+        Button buttonSettings = findViewById(R.id.buttonSettings);
 
         button1.setOnClickListener(v -> numberPressed("1"));
-
         button2.setOnClickListener(v -> numberPressed("2"));
-
         button3.setOnClickListener(v -> numberPressed("3"));
-
         button4.setOnClickListener(v -> numberPressed("4"));
-
         button5.setOnClickListener(v -> numberPressed("5"));
-
         button6.setOnClickListener(v -> numberPressed("6"));
-
         button7.setOnClickListener(v -> numberPressed("7"));
-
         button8.setOnClickListener(v -> numberPressed("8"));
-
         button9.setOnClickListener(v -> numberPressed("9"));
-
         button0.setOnClickListener(v -> numberPressed("0"));
-
         buttonDot.setOnClickListener(v -> numberPressed("."));
+
+        buttonSettings.setOnClickListener(v -> {
+            Log.d(LOG_TAG, "Main.GO_TO_SETTINGS ->");
+            Intent showSettings = new Intent(MainActivity.this, ActivitySettings.class);
+            startActivity(showSettings);
+        });
 
         buttonAdd.setOnClickListener(v -> {
             actionPressed();
@@ -166,34 +177,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.i(LOG_TAG, "Main.onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.i(LOG_TAG, "Main.onResume()");
         numbersBox.setText(userData.getTextBox());
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        Log.i(LOG_TAG, "Main.onPause()");
         userData.setTextBox(numbersBox.getText().toString());
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.i(LOG_TAG, "Main.onStop()");
         userData.setTextBox(numbersBox.getText().toString());
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.i(LOG_TAG, "Main.onDestroy()");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+        Log.i(LOG_TAG, "Main.onRestart()");
         numbersBox.setText(userData.getTextBox());
     }
 

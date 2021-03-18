@@ -7,105 +7,126 @@
     android:background="@drawable/background"
     android:orientation="vertical">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/numbersBox"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="20dp"
-        android:textAlignment="textEnd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_buttonTextSize" />
+        android:orientation="vertical">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/numbersBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_buttonTextSize" />
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:useDefaultMargins="true">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:columnCount="4"
-        android:rowCount="4"
-        android:useDefaultMargins="true">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button7"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button7" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button8"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button9"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAdd"
+                style="@style/ActionButtonStyle"
+                android:text="@string/_buttonAdd" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSub"
+                style="@style/ActionButtonStyle"
+                android:text="@string/_buttonSub" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMul"
+                style="@style/ActionButtonStyle"
+                android:text="@string/_buttonMul" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonResult"
+                style="@style/ActionButtonStyle"
+                android:text="@string/_buttonResult" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button0"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_button0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDot"
+                style="@style/NumericButtonStyle"
+                android:text="@string/_buttonDot" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDiv"
+                style="@style/ActionButtonStyle"
+                android:text="@string/_buttonDiv" />
+
+
+        </GridLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button7"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button7" />
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="@string/_buttonSettings" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button8"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button8" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button9"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button9" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAdd"
-            style="@style/ActionButtonStyle"
-            android:text="@string/_buttonAdd" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button4"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button4" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button5"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button5" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button6"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button6" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSub"
-            style="@style/ActionButtonStyle"
-            android:text="@string/_buttonSub" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button1"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button1" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button2"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button2" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button3"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button3" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonMul"
-            style="@style/ActionButtonStyle"
-            android:text="@string/_buttonMul" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonResult"
-            style="@style/ActionButtonStyle"
-            android:text="@string/_buttonResult" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button0"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_button0" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonDot"
-            style="@style/NumericButtonStyle"
-            android:text="@string/_buttonDot" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonDiv"
-            style="@style/ActionButtonStyle"
-            android:text="@string/_buttonDiv" />
-
-
-    </GridLayout>
-
+    </FrameLayout>
 </LinearLayout>
+
+
+
+
+
